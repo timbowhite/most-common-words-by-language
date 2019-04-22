@@ -1,11 +1,12 @@
 import loadWords from 'most-common-words-by-language/loadWords';
+const lo = require('lodash');
 
 function findWord(word) {
   const allWords = loadWords();
 
   return Object.assign(
     {},
-    ...Object.entries(allWords)
+    ...lo.entries(allWords)
       .map(([name, words]) => {
         const foundIndex = words.findIndex(w => w.toLowerCase() === word.toLowerCase());
 
