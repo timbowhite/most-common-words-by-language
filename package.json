@@ -4,6 +4,7 @@
   "description": "List of the most common words in many languages",
   "main": "build/index.js",
   "scripts": {
+    "install": "npm run build",
     "build": "rm -rf build && babel --copy-files src --out-dir build --ignore tests/",
     "lint": "eslint src",
     "prepublishOnly": "npm run build",
